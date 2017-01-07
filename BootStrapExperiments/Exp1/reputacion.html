@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Sistema de Puntuacion de Comentarios, Analisis de Sentimientos DotBrain.co">
+    <meta name="author" content="DotBrain.co, Hector F. Jimenez Saldarriaga, Diseño Original">
+    <meta name="keywords" content="sistema de puntuacion,reputacion, evaluacion, profesores, dotbrain, DotBrain, analisis de datos.">
+    <link rel="icon" type="image/png" href="../static/public/icon.png" />
+    <title>Analisis de Sentimientos, Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="estilito.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="profile-header-container">   
+                    <div class="profile-header-img">
+                        <img class="img-circle center-block" src="https://heticor915.github.io/img/profile.jpg" />
+                        <!-- badge de puntos-->
+                        <div class="rank-label-container center-block">
+                            <span class="label label-default rank-label">100 puntos</span>
+                        </div>
+                    </div>
+                </div> 
+                </div>
+                <div class="col-md-3"></div>
+           </div>     
+        </div>
+        <div class="container">
+           <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <div class="rating-block">
+                        <h4>Calificación General</h4>
+                        <h2 class="bold padding-bottom-7">4.0 <small>/ 5</small></h2>
+                        <button type="button" class="btn btn-info btn-sm" aria-label="Left Align">
+                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm" aria-label="Left Align">
+                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm" aria-label="Left Align">
+                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-info btn-grey btn-sm" aria-label="Left Align">
+                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Clasificacion por Estudiantes</h4>
+                    <div class="pull-left">
+                        <div class="pull-left" style="width:35px; line-height:1;">
+                            <div style="height:9px; margin:5px 0;">5 <span class="glyphicon glyphicon-star"></span></div>
+                        </div>
+                        <div class="pull-left" style="width:180px;">
+                            <div class="progress" style="height:9px; margin:8px 0;">
+                              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="pull-right" style="margin-left:10px;">94</div>
+                    </div>
+                    <div class="pull-left">
+                        <div class="pull-left" style="width:35px; line-height:1;">
+                            <div style="height:9px; margin:5px 0;">4 <span class="glyphicon glyphicon-star"></span></div>
+                        </div>
+                        <div class="pull-left" style="width:180px;">
+                            <div class="progress" style="height:9px; margin:8px 0;">
+                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="pull-right" style="margin-left:10px;">1</div>
+                    </div>
+                    <div class="pull-left">
+                        <div class="pull-left" style="width:35px; line-height:1;">
+                            <div style="height:9px; margin:5px 0;">3 <span class="glyphicon glyphicon-star"></span></div>
+                        </div>
+                        <div class="pull-left" style="width:180px;">
+                            <div class="progress" style="height:9px; margin:8px 0;">
+                              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="pull-right" style="margin-left:10px;">0</div>
+                    </div>
+                    <div class="pull-left">
+                        <div class="pull-left" style="width:35px; line-height:1;">
+                            <div style="height:9px; margin:5px 0;">2 <span class="glyphicon glyphicon-star"></span></div>
+                        </div>
+                        <div class="pull-left" style="width:180px;">
+                            <div class="progress" style="height:9px; margin:8px 0;">
+                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="pull-right" style="margin-left:10px;">0</div>
+                    </div>
+                    <div class="pull-left">
+                        <div class="pull-left" style="width:35px; line-height:1;">
+                            <div style="height:9px; margin:5px 0;">1 <span class="glyphicon glyphicon-star"></span></div>
+                        </div>
+                        <div class="pull-left" style="width:180px;">
+                            <div class="progress" style="height:9px; margin:8px 0;">
+                              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="pull-right" style="margin-left:10px;">0</div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+           </div> 
+        </div>
+        <div class="container">
+            <div class="col-md-3" ></div>
+          
+            <div class="col-md-6" >
+            <br>
+                <div class="review-block-rate ">
+                                    <button type="button" class="btn btn-danger btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="review-block-title">Impuntual</div>
+                                <div class="review-block-description"><em>El profesor Llega casi media hora despues de que la clase comienza, es muy demorado para dar inicio a clases, y el trabajo suplementario no llega a tiempo.</em> </div>
+            <br>
+                <div class="review-block-rate ">
+                                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-grey btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="review-block-title">Genial, De los mejores</div>
+                                <div class="review-block-description"><em>El profesor gustavo es uno de los mejores que he tenido, es muy puntual, escucha a los estudiantes y conoce bien el estado del arte.</em></div>
+            </div>
+            <div class="col-md-3" ></div>
+        </div>
+    </div>
+    <br><h4>Opcion 2</h4>
+    <div class="container">
+        <div class="col-md-3" ></div>
+        <div class="col-md-3" >
+            <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+            <div class="review-block-name"><a href="#">heticor</a></div>
+            <div class="review-block-date">Enero 2, 2016<br/>Hace 2 dias</div></div>
+        <div class="col-md-3" >
+        <br>
+            <div class="review-block-rate">
+                                <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="review-block-title">Otro Estilo de Comentario</div>
+                            <div class="review-block-description">Este es un comentario mas, pero en este identificamo el usuario, y la fecha de comentario, toca usar ajax para traer la data que esta persistente en la base de datos, es responsive </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br>
+    <br>
+  </body>
+     <!-- Bootstrap core JavaScript
+     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
