@@ -1,0 +1,88 @@
+<!--Notes FreeCode Camp-->
+<!--Bitacora-->
+<script>
+  $(document).ready(function() {
+    //solo carga el script justo despues de que renderiza el html.
+    //las funciones en JQuery todas inician con $ operador,
+    //despues sigue el elemento html que queremos trabajar seguido de la 
+    //funcion que queremos aplicar, en este caso a todos los botones agregarclase animated bounce.
+    $("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
+    //Tambien podemos apuntar a elementos por el ide asi :
+    $("#target3").addClass("btn-danger animated fadeOut"); 
+    //toma el elemento que tenga #target3 y agrega las clases fadeOut and btn-danger.
+    //Now you know three ways of targeting elements: by type: $("button"), by class: $(".btn"), and by id $("#target1").
+
+    //Es posible eliminar clases css de los elementos como :
+    $("button").removeClass("btn-default"); 
+
+    //We can also change the CSS of an HTML element directly with jQuery.
+    //jQuery has a function called .css() that allows you to change the CSS of an element.
+    $("#target1").css("color", "red");
+
+    //es posible modificar elementos htlm y las propiedades de html 
+    $("#target1").prop("disabled", "true");   //desabilita el boton
+
+  //Otra cosa interesante es que se puede cambiar el texto y agregar mas html con la funcion
+  //html() asi :
+    $(id,class,elemento).html("<i>Ejemplo Add html italic </i>");
+    // si es solo texto :
+    $(id,class,elemento).text("Nuevo Texto");
+    //tambien se puede borrar
+    $(id,class,elemento).remove()
+    //se puede mover los elemento de una casilla a otra,por ejemplo entre divs.
+    $("#target4").appendTo("#left-well");
+    //tambien se pueden clonar, sin necesidad de remover
+    $("#target2").clone().appendTo("#right-well");  //function chaining. $('p').func().func2()...
+    //Todos los elementos en html tiene un elemento padre, de los cuales se hereda 
+    //colores o estiilos. en jquery es posible acceder al elemento padre y realizar acciones:
+    //por ejemplo. 
+    $(".p").parent().css("font-family","Lobster"); 
+    //La linea anterior toma todos los elmentos con la clase .p, luego a sus elementos padre 
+    //les cambiara la fuente, a Lobster.
+    // tambien es posible acceder al elemento hijo con children()
+
+    //ademas es posible acceder a todos los hijos especificos.
+    $(".target:nth-child(2)").addClass("animated bounce");
+
+
+    //Tambien es posible realizar acciones para los elementos pares e impare        
+    $(".target:even").addClass("animated shake");
+
+    //Este efecto de Caida como hoja se ve cool
+    $("body").addClass("animated hinge");
+  });
+</script>
+
+<!-- Only change code above this line. -->
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+      <h4>#left-well</h4>
+      <div class="well" id="left-well">
+        <button class="btn btn-default target" id="target1">#target1</button>
+        <button class="btn btn-default target" id="target2">#target2</button>
+        <button class="btn btn-default target" id="target3">#target3</button>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <h4>#right-well</h4>
+      <div class="well" id="right-well">
+        <button class="btn btn-default target" id="target4">#target4</button>
+        <button class="btn btn-default target" id="target5">#target5</button>
+        <button class="btn btn-default target" id="target6">#target6</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+link
+
+<!--Learn Emmet at https://docs.emmet.io/
+Emmet is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow:-->
+
+<!--PortFolio:
+
+1.Build a Tribute Page-->
+
